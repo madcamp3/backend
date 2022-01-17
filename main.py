@@ -37,9 +37,9 @@ async def getClassicList():
         return JSONResponse(content={"data": []}, status_code=404)
     return JSONResponse(content={"data": result}, status_code=200)
 
-@app.get("/kpop/all")
+@app.get("/pop/all")
 async def getClassicList():
-    query_args = {"CATEGORY": "kpop"}
+    query_args = {"CATEGORY": "pop"}
     result = exec_fetch_query(SEARCHLIST_QUERY, query_args)
     if not result:
         return JSONResponse(content={"data": []}, status_code=404)
@@ -65,13 +65,13 @@ async def getClassicItem(filename: str):
     return FileResponse(status_code=200, path=file_path)
 
 
-@app.get("/kpop/{filename:path}")
+@app.get("/pop/{filename:path}")
 async def getClassicItem(filename: str):
-    query_args = {"CATEGORY": "kpop", "FILENAME":filename}
+    query_args = {"CATEGORY": "pop", "FILENAME":filename}
     result = exec_fetch_query(SEARCHFILE_QUERY, query_args)
     if not result:
         return 404, "file not found"
-    file_path = "kpop/" + filename + ".mp3"
+    file_path = "pop/" + filename + ".mp3"
     return FileResponse(status_code=200, path=file_path)
 
 
