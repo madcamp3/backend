@@ -7,6 +7,8 @@
 
 ## 2. Project Structures
 
+![img](https://user-images.githubusercontent.com/77768091/149932952-d0a71853-9f51-43d6-8399-b5fa15b3df7c.png)
+
 ## 3. Deep Learning Model
 
 OpenAI의 jukebox 모델을 참고하여 음악을 생성하는 모듈을 구성했으며, 해당 모듈을 이용하여 음악 파일들을 생성했습니다.
